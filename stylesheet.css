@@ -343,26 +343,51 @@ section {
     right: -20px;
     animation: showText 0.5s 1.5s linear forwards;
 }
-.progress-line.html span:: after{
+.progress-line.html span::after{
     content: "90%";
 }
-.progress-line.css span:: after{
+.progress-line.css span::after{
     content: "60%";
 }
-.progress-line.javascript span:: after{
+.progress-line.javascript span::after{
     content: "85%";
 }
-.progress-line.python span:: after{
+.progress-line.python span::after{
     content: "90%";
 }
-.progress-line.c/c+ span:: after{
+.progress-line.c/c+ span::after{
     content: "90%";
 }
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-right-width: #000;
+    top: -10px;
+    right:0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
 
-
-
-
-
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}
+.radial-bars{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.radial-bars .radial-bar{
+    
+}
 
 
 
