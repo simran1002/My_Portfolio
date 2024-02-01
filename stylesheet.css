@@ -166,8 +166,21 @@ body {
     margin-bottom: 4 rem;
 }
 
+#services{
+    color: aliceblue;
+    font-size:20px;
+    line-height:1.4;
+    margin-bottom:4rem;
+}
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    padding-bottom: 70px
+}
 
-
+.container {
+    padding: 90px;
+}
 
 
 
