@@ -261,16 +261,24 @@ section {
     margin-left: 120px;
 }
 
-.heading1{
+/* .heading1{
     text-align: center;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
+} */
+
+.heading1 {
+    text-align: center;
+    text-decoration: underline; /* Remove text-decoration-thickness */
+    margin-bottom: 50px;
+    border-bottom: 5px solid; /* Add a solid underline with 5px thickness */
 }
 
+
 .bar{
-    font-site: 23px;
+    font-size: 23px;
 }
 
 .Technical-bars .bar {
