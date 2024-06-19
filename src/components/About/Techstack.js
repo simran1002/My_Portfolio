@@ -8,7 +8,6 @@ import {
   DiMongodb,
   DiPython,
   DiGit,
-  DiJava,
 } from "react-icons/di";
 import {
   SiRedis,
@@ -27,9 +26,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiJavascript1 />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <TbBrandGolang />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiNodejs />
@@ -60,9 +56,6 @@ function Techstack() {
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <DiPython />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <DiJava />
       </Col>
     </Row>
   );
