@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#160e22"/>
+      <stop offset="1" stop-color="#241436"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="700" cy="60" r="180" fill="#a855f7" opacity="0.07"/>
+  <circle cx="80" cy="420" r="140" fill="#a855f7" opacity="0.05"/>
+
+  <text x="56" y="86" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#f3ecfa">CipherChat</text>
+  <rect x="56" y="100" width="120" height="4" rx="2" fill="url(#glow)"/>
+  <rect x="56" y="100" width="46" height="4" rx="2" fill="#a855f7"/>
+
+  <rect x="40" y="126" width="720" height="216" rx="12" fill="#120a1c" stroke="#a855f7" stroke-opacity="0.35"/>
+  <rect x="40" y="126" width="720" height="34" rx="12" fill="#1a1226"/>
+  <rect x="40" y="148" width="720" height="12" fill="#1a1226"/>
+  <circle cx="64" cy="143" r="6" fill="#ff5f57"/>
+  <circle cx="84" cy="143" r="6" fill="#febc2e"/>
+  <circle cx="104" cy="143" r="6" fill="#28c840"/>
+
+  <text x="76" y="184" font-family="Consolas, Menlo, monospace" font-size="15" fill="#f3ecfa"><tspan fill="#a855f7" font-weight="700">$</tspan> node cipherchat --start</text>
+  <text x="76" y="212" font-family="Consolas, Menlo, monospace" font-size="15" fill="#b39ddb">[ws] socket server listening on :8080</text>
+  <text x="76" y="242" font-family="Consolas, Menlo, monospace" font-size="15" fill="#b39ddb">[mq] rabbitmq channel open — queue: messages</text>
+  <text x="76" y="272" font-family="Consolas, Menlo, monospace" font-size="15" fill="#b39ddb">[e2e] AES-256 encryption enabled</text>
+  <text x="76" y="302" font-family="Consolas, Menlo, monospace" font-size="15" fill="#a855f7">✓ 2 users connected · chat is live</text>
+
+  <rect x="56" y="368" rx="12" width="65" height="26" fill="none" stroke="#a855f7" stroke-opacity="0.55"/>
+  <text x="88.5" y="386" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#e4d8f0">React</text>
+  <rect x="133" y="368" rx="12" width="81.39999999999999" height="26" fill="none" stroke="#a855f7" stroke-opacity="0.55"/>
+  <text x="173.7" y="386" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#e4d8f0">Node.js</text>
+  <rect x="226.39999999999998" y="368" rx="12" width="97.8" height="26" fill="none" stroke="#a855f7" stroke-opacity="0.55"/>
+  <text x="275.29999999999995" y="386" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#e4d8f0">Socket.io</text>
+  <rect x="336.2" y="368" rx="12" width="89.6" height="26" fill="none" stroke="#a855f7" stroke-opacity="0.55"/>
+  <text x="381" y="386" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#e4d8f0">RabbitMQ</text>
+</svg>

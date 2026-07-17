@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/avatar.svg";
+import myImg from "../../Assets/profile.jpg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
@@ -8,6 +8,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { SiLeetcode } from "react-icons/si";
 
 function Home2() {
   return (
@@ -19,43 +20,49 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-            I am passionate about programming and creating incredible websites. 🤷‍♂️
+              I'm a <b className="purple">Software Development Engineer</b>{" "}
+              who loves taking a hard problem and shipping a system that just
+              works — at <b className="purple">NxtWave</b>, that means backend
+              services processing high-volume data every day.
               <br />
-              <br />I am fluent in classics like
+              <br />
+              My core tools are{" "}
               <i>
-                <b className="purple"> Javascript, Python, C/C++. </b>
+                <b className="purple">Java, Python, and TypeScript</b>
+              </i>
+              , backed by a strong foundation in{" "}
+              <i>
+                <b className="purple">SQL, C++, and system design.</b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              What gets me excited is{" "}
               <i>
-                <b className="purple">Web Technologies and Applications </b> and
-                also in areas related to{" "}
-                <b className="purple">
-                  Blockchain Development.
-                </b>
-              </i>
+                <b className="purple">distributed systems engineering</b>
+              </i>{" "}
+              — designing microservices, event-driven pipelines, and APIs that
+              hold up under real load, with{" "}
+              <b className="purple">Kafka, RabbitMQ, Redis, and PostgreSQL</b>{" "}
+              doing the heavy lifting.
               <br />
               <br />
-              Whenever possible, I also apply my passion for developing products
-              with <b className="purple">Node.js</b> and
-              <i>
-                <b className="purple">
-                  {" "}
-                  Modern Javascript Library and Frameworks
-                </b>
-              </i>
-              &nbsp; like
-              <i>
-                <b className="purple"> React.js and Next.js.</b><br /><br />
-              </i>
-              
-              I am dedicated to turning ideas into innovative web applications. 
+              When a product needs a face, I build it end-to-end with{" "}
+              <b className="purple">Node.js, React.js, and Next.js</b> — clean,
+              testable code from database to pixel.
+              <br />
+              <br />
+              National hackathon winner ×2. Global Rank 245 in Google
+              Kickstart. Always building.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
+              <img
+                src={myImg}
+                className="img-fluid"
+                alt="Simran Yadav"
+                style={{ borderRadius: "50%", maxWidth: "300px" }}
+              />
             </Tilt>
           </Col>
         </Row>
@@ -72,18 +79,9 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="GitHub"
                 >
                   <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/simranyadav464"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
                 </a>
               </li>
               <li className="social-icons">
@@ -92,8 +90,31 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour  home-social-icons"
+                  aria-label="LinkedIn"
                 >
                   <FaLinkedinIn />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://leetcode.com/u/simranyadav_10/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour home-social-icons"
+                  aria-label="LeetCode"
+                >
+                  <SiLeetcode />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a
+                  href="https://twitter.com/simranyadav464"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-colour  home-social-icons"
+                  aria-label="Twitter"
+                >
+                  <AiOutlineTwitter />
                 </a>
               </li>
               <li className="social-icons">
@@ -102,6 +123,7 @@ function Home2() {
                   target="_blank"
                   rel="noreferrer"
                   className="icon-colour home-social-icons"
+                  aria-label="Instagram"
                 >
                   <AiFillInstagram />
                 </a>

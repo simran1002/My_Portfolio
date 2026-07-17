@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["start"],
+      "cwd": "C:\\Users\\simra\\OneDrive\\Desktop\\My_Portfolio",
+      "port": 3000
+    }
+  ]
+}

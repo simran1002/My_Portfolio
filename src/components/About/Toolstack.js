@@ -1,4 +1,3 @@
-// Toolstack.js
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
@@ -6,51 +5,35 @@ import {
   SiPostman,
   SiGithub,
   SiAmazonaws,
-  SiHeroku,
-  SiVercel,
-  SiRender,
   SiDocker,
-  SiFigma,
-  SiAdobeillustrator,
-  SiCanva,
+  SiKubernetes,
+  SiJenkins,
+  SiGithubactions,
+  SiLinux,
+  SiVercel,
 } from "react-icons/si";
+
+const tools = [
+  { icon: <SiVisualstudiocode />, name: "VS Code" },
+  { icon: <SiGithub />, name: "GitHub" },
+  { icon: <SiPostman />, name: "Postman" },
+  { icon: <SiAmazonaws />, name: "AWS" },
+  { icon: <SiDocker />, name: "Docker" },
+  { icon: <SiKubernetes />, name: "Kubernetes" },
+  { icon: <SiJenkins />, name: "Jenkins" },
+  { icon: <SiGithubactions />, name: "GitHub Actions" },
+  { icon: <SiLinux />, name: "Linux" },
+  { icon: <SiVercel />, name: "Vercel" },
+];
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiGithub />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAmazonaws />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiHeroku />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiRender />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiDocker />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiFigma />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiAdobeillustrator />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiCanva />
-      </Col>
+      {tools.map((tool) => (
+        <Col xs={4} md={2} className="tech-icons" key={tool.name} title={tool.name}>
+          {tool.icon}
+        </Col>
+      ))}
     </Row>
   );
 }

@@ -9,16 +9,21 @@ function AboutCard() {
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">Simran Yadav </span>
-            from <span className="purple"> Kanpur, Uttar Pradesh.</span>
+            from <span className="purple"> Kanpur, Uttar Pradesh</span>,
+            currently based in{" "}
+            <span className="purple">Hyderabad, India.</span>
             <br />
-            I am a MERN Stack Developer.
             <br />
-            I am currently pursuing Bachelor of Technology in Computer Science and Engineering.
+            I am a Software Development Engineer at{" "}
+            <span className="purple">NxtWave</span>, where I build scalable
+            backend services and high-volume data pipelines.
             <br />
-            I look forward to the opportunity to bring my skills and passion to your next project.
+            <br />
+            I completed my Bachelor of Technology in Computer Science and
+            Engineering (AI/ML) from AKGEC, Ghaziabad in 2025.
+            <br />
             <br />
             Apart from coding, some other activities that I love to do!
-            <br />
           </p>
           <ul>
             <li className="about-activity">

@@ -1,13 +1,61 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
+import GithubStats from "./GithubStats";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import Reveal from "../Reveal";
+import cipherchat from "../../Assets/Projects/cipherchat.svg";
+import referloop from "../../Assets/Projects/referloop.svg";
+import credit from "../../Assets/Projects/credit.svg";
+import quiz from "../../Assets/Projects/quiz.svg";
+import elearn from "../../Assets/Projects/elearn.svg";
+import gallery from "../../Assets/Projects/gallery.svg";
+
+const projects = [
+  {
+    imgPath: cipherchat,
+    title: "CipherChat Messenger",
+    description:
+      "Real-time chat platform built with React, Node.js, and Socket.io, using RabbitMQ for reliable message delivery. Features end-to-end message encryption, JWT-based authentication, and hardened session management.",
+    ghLink: "https://github.com/simran1002/CipherChat_Messenger",
+    demoLink: "https://cipher-chat-messenger.vercel.app/register",
+  },
+  {
+    imgPath: referloop,
+    title: "Refer-Loop",
+    description:
+      "Referral and rewards system built with FastAPI on a RESTful architecture. Implements secure authentication and encrypted end-to-end payment flows through the Razorpay API with robust error handling.",
+    ghLink: "https://github.com/simran1002/refer-loop",
+  },
+  {
+    imgPath: credit,
+    title: "Credit Approval System",
+    description:
+      "Node.js and Express application for managing loans and customer data, exposing REST APIs for credit eligibility checks, loan approval, and payment processing.",
+    ghLink: "https://github.com/simran1002/Credit-Approval-System",
+  },
+  {
+    imgPath: quiz,
+    title: "QuizzicalQuest",
+    description:
+      "Quiz platform where admins create and manage quizzes while users participate, get scored, and compete through leaderboards. Built on a Node.js backend with MongoDB.",
+    ghLink: "https://github.com/simran1002/QuizzicalQuest",
+  },
+  {
+    imgPath: elearn,
+    title: "E-Learning Management System",
+    description:
+      "Backend API for an e-learning platform covering user registration, profile management, course management, and enrollment, with role-based access control.",
+    ghLink: "https://github.com/simran1002/E-Learning-Management-System",
+  },
+  {
+    imgPath: gallery,
+    title: "AuthImage Gallery",
+    description:
+      "Image gallery application with Google (Gmail) authentication, image upload, and in-browser cropping and editing.",
+    ghLink: "https://github.com/simran1002/AuthImage-Gallery",
+  },
+];
 
 function Projects() {
   return (
@@ -20,73 +68,15 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
+        <GithubStats />
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="CipherChat-Messenger"
-              description="About
-CipherChat Messenger prioritizes user privacy with advanced encryption, includes robust authentication and authorization features, enhancing overall communication security."
-              ghLink="https://github.com/simran1002/CipherChat_Messenger"
-              demoLink="https://cipher-chat-messenger.vercel.app/register"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Credit-Approval-System"
-              description="Credit Approval System is a Node.js application built with Express.js framework for managing loans and customer data, along with an API for loan approval and payment processing."
-              ghLink="https://github.com/simran1002/Credit-Approval-System"
-              demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="E-commerce-Marketplace"
-              description="Developed an e-commerce platform that leverages blockchain technology for secure transactions, supply chain transparency, and decentralized product reviews."
-              ghLink="https://github.com/simran1002/E-commerce-Marketplace.git"
-              demoLink=""              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="QuizzicalQuest"
-              description="It enables admins to create quizzes, manage them efficiently, and offers users an intuitive platform for participation, scoring, and competitive engagement through leaderboards."
-              ghLink="https://github.com/simran1002/QuizzicalQuest"
-              demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="E-Learning-Management-System"
-              description="This backend API provides endpoints for user registration, user profile management, course management, user enrollment, and more."
-              ghLink="https://github.com/simran1002/E-Learning-Management-System.git"
-              demoLink=""
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="AuthImage-Gallery"
-              description="Implementing a login/signup feature using Gmail authentication, image upload & editing with in-browser cropping, and an image gallery."
-              ghLink="https://github.com/simran1002/AuthImage-Gallery.git"
-              demoLink=""    
-            />
-          </Col>
+          {projects.map((project, i) => (
+            <Col md={4} className="project-card" key={project.title}>
+              <Reveal delay={(i % 3) * 120}>
+                <ProjectCard isBlog={false} {...project} />
+              </Reveal>
+            </Col>
+          ))}
         </Row>
       </Container>
     </Container>

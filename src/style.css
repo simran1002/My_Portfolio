@@ -244,6 +244,7 @@ button:focus {
 }
 #tsparticles {
   position: fixed !important;
+  z-index: -1;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   width: 100%;
@@ -256,7 +257,7 @@ button:focus {
 
 .home-section {
   position: relative;
-  z-index: -1;
+  z-index: 0;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
@@ -740,4 +741,372 @@ button:focus {
 }
 .fork-btn-inner::after {
   display: none !important;
+}
+
+/* --------- */
+/* Terminal  */
+/* --------- */
+.terminal-section {
+  position: relative;
+  padding-top: 20px !important;
+  padding-bottom: 80px !important;
+  background-color: #0c0513;
+}
+
+.terminal-window {
+  max-width: 760px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(199, 112, 240, 0.4);
+  box-shadow: 0 6px 30px rgba(119, 53, 136, 0.35);
+  cursor: text;
+  text-align: left;
+}
+
+.terminal-titlebar {
+  background: #1a1226;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.terminal-dot.red { background: #ff5f57; }
+.terminal-dot.yellow { background: #febc2e; }
+.terminal-dot.green { background: #28c840; }
+
+.terminal-title {
+  color: #a588c0;
+  font-size: 0.8em;
+  margin-left: 10px;
+  font-family: "Courier New", monospace;
+}
+
+.terminal-body {
+  background: #120a1c;
+  padding: 16px;
+  height: 320px;
+  overflow-y: auto;
+  font-family: "Courier New", Consolas, monospace;
+  font-size: 0.92em;
+  line-height: 1.5;
+}
+
+.terminal-line {
+  color: #e4d8f0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminal-output {
+  color: #b39ddb;
+}
+
+.terminal-prompt {
+  color: #c770f0;
+  font-weight: bold;
+}
+
+.terminal-input-line {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #e4d8f0;
+  font-family: inherit;
+  font-size: inherit;
+  flex: 1;
+  caret-color: #c770f0;
+}
+
+/* --------------- */
+/* Scroll progress */
+/* --------------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #c770f0, #623686);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  background: rgba(199, 112, 240, 0.85);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 1.3em;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(119, 53, 136, 0.6);
+  transition: transform 0.2s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+}
+
+/* ------------- */
+/* GitHub stats  */
+/* ------------- */
+.gh-stats {
+  padding-bottom: 30px;
+  color: white;
+}
+
+.gh-stats-caption {
+  color: #a588c0 !important;
+  font-size: 1.05em;
+}
+
+.gh-stat-tile {
+  padding: 14px 10px;
+}
+
+.gh-stat-icon {
+  color: #c770f0;
+  font-size: 1.6em;
+}
+
+.gh-stat-value {
+  font-size: 1.7em;
+  font-weight: 700;
+  color: white;
+}
+
+.gh-stat-label {
+  color: #a588c0;
+  font-size: 0.85em;
+}
+
+.gh-stats-langs {
+  color: #a588c0 !important;
+  font-size: 0.95em;
+}
+
+.gh-lang-chip {
+  display: inline-block;
+  border: 1px solid rgba(199, 112, 240, 0.5);
+  border-radius: 12px;
+  padding: 2px 12px;
+  margin: 0 4px;
+  color: #e4d8f0;
+  font-size: 0.9em;
+}
+
+/* ---------------- */
+/* Color refinement */
+/* ---------------- */
+html {
+  --accent: #c770f0;
+  --accent-2: #7c3aed;
+  --accent-soft: #a588c0;
+  --text-bright: #f3ecfa;
+}
+
+.main-name {
+  background: linear-gradient(90deg, #cd5ff8, #8b5cf6, #cd5ff8);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: name-shine 6s linear infinite;
+}
+
+@keyframes name-shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* --------- */
+/* Hero CTA  */
+/* --------- */
+.hero-tagline {
+  color: var(--accent-soft);
+  font-size: 1.15em;
+  padding: 0 0 20px 50px;
+  max-width: 560px;
+  text-align: left;
+}
+
+.hero-cta {
+  padding-left: 50px;
+  text-align: left;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 10px 28px !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.3px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.hero-btn-primary {
+  background: linear-gradient(135deg, #8b5cf6, #c770f0) !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 18px rgba(139, 92, 246, 0.45);
+}
+
+.hero-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 26px rgba(139, 92, 246, 0.65);
+  color: #fff !important;
+}
+
+.hero-btn-outline {
+  background: transparent !important;
+  border: 2px solid var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+.hero-btn-outline:hover {
+  transform: translateY(-3px);
+  background: rgba(199, 112, 240, 0.12) !important;
+  color: var(--text-bright) !important;
+}
+
+/* ----------------- */
+/* Reveal animation  */
+/* ----------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ------------- */
+/* Contact page  */
+/* ------------- */
+.contact-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 80px !important;
+  background-image: var(--section-background-color) !important;
+  color: white !important;
+}
+
+.contact-info-card {
+  background-color: rgba(28, 17, 46, 0.7) !important;
+  border: 1px solid rgba(199, 112, 240, 0.35);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: left;
+  height: 100%;
+}
+
+.contact-info-card h4 {
+  padding-bottom: 8px;
+}
+
+.contact-info-text {
+  color: var(--accent-soft);
+  padding-bottom: 12px;
+}
+
+.contact-info-line {
+  margin-bottom: 12px;
+  font-size: 0.98em;
+}
+
+.contact-info-line a {
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+.contact-info-line a:hover {
+  color: var(--accent);
+}
+
+.contact-form {
+  background-color: rgba(28, 17, 46, 0.7) !important;
+  border: 1px solid rgba(199, 112, 240, 0.35);
+  border-radius: 12px;
+  padding: 28px;
+  text-align: left;
+}
+
+.contact-form .form-label {
+  color: var(--text-bright);
+  font-weight: 600;
+}
+
+.contact-form .form-control {
+  background-color: #120a1c !important;
+  border: 1px solid rgba(199, 112, 240, 0.3) !important;
+  color: var(--text-bright) !important;
+  border-radius: 8px !important;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(199, 112, 240, 0.2) !important;
+}
+
+.contact-form .form-control::placeholder {
+  color: #6d5a85;
+}
+
+.contact-submit {
+  min-width: 180px;
+}
+
+.contact-status {
+  margin-top: 16px;
+  font-size: 0.95em;
+}
+
+.contact-status-ok {
+  color: #6ee7a0;
+}
+
+.contact-status-err {
+  color: #fca5a5;
+}
+
+.contact-status a {
+  color: var(--accent);
+}
+
+/* ---------------------- */
+/* Project card polish    */
+/* ---------------------- */
+.project-card-view .card-img-top {
+  border-radius: 10px 10px 0 0;
 }
